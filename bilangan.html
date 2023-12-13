@@ -1,0 +1,25 @@
+<!-- HTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Penjumlahan Dua Bilangan</title>
+  <script>
+    function hitungJumlah() {
+      var bilangan1 = parseFloat(document.getElementById('bilangan1').value);
+      var bilangan2 = parseFloat(document.getElementById('bilangan2').value);
+      var jumlah = bilangan1 + bilangan2;
+
+      document.getElementById('hasil').innerHTML = "Jumlah: " + jumlah;
+    }
+  </script>
+</head>
+<body>
+  <h2>Penjumlahan Dua Bilangan</h2>
+  Bilangan 1: <input type="text" id="bilangan1" />
+  Bilangan 2: <input type="text" id="bilangan2" />
+  <button onclick="hitungJumlah()">Hitung Jumlah</button>
+  <p id="hasil"></p>
+</body>
+</html>
