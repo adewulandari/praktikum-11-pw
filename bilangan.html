@@ -1,4 +1,4 @@
-<!-- HTML -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,20 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Penjumlahan Dua Bilangan</title>
   <script>
-    function hitungJumlah() {
-      var bilangan1 = parseFloat(document.getElementById('bilangan1').value);
-      var bilangan2 = parseFloat(document.getElementById('bilangan2').value);
-      var jumlah = bilangan1 + bilangan2;
+    function tambah() {
+      let bilangan1 = document.getElementById("bil1").value;
+      let bilangan2 = document.getElementById("bil2").value;
+      let jumlah = parseInt(bilangan1) + parseInt(bilangan2);
+      let hasil = document.getElementById("hasil");
+      hasil.innerHTML = jumlah
 
-      document.getElementById('hasil').innerHTML = "Jumlah: " + jumlah;
+      
     }
   </script>
 </head>
 <body>
-  <h2>Penjumlahan Dua Bilangan</h2>
-  Bilangan 1: <input type="text" id="bilangan1" />
-  Bilangan 2: <input type="text" id="bilangan2" />
-  <button onclick="hitungJumlah()">Hitung Jumlah</button>
-  <p id="hasil"></p>
+  <h1>Menghitung Jumlah Dua Bilangan</h1>
+
+  Bilangan 1 :
+  <input type="number" id="bil1">
+  <br>
+  <br>
+  <h1>+</h1>
+  <br>
+  <br>
+  Bilangan 2 :
+  <input type="number" id="bil2">
+  <br>
+  <br>
+  <button onclick="tambah()">=</button>
+  <hr>
+  <h2>Hasil Penjumlahan</h2>
+  <span id="hasil"></span>
 </body>
 </html>
